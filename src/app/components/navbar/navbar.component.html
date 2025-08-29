@@ -1,12 +1,26 @@
 <nav class="navbar" [ngClass]="{'active': isNavbarActive}">
-  <div class="hamburger" (click)="toggleNavbar()">
-    <span *ngIf="!isNavbarActive">&#9776;</span> 
-    <span *ngIf="isNavbarActive">&#10006;</span> 
-  </div>
-  <div class="navbar-links">
-    <a href="#about">About Me</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
+  <div class="container nav-inner">
+    <a href="#about" class="brand">
+      <span class="brand-dot"></span>
+      <span>Faris Gogić</span>
+    </a>
+
+    <div class="spacer"></div>
+
+    <button 
+      class="hamburger show-on-mobile" 
+      (click)="toggleNavbar()" 
+      aria-label="Toggle navigation" 
+      [attr.aria-expanded]="isNavbarActive">
+      <span *ngIf="!isNavbarActive">&#9776;</span>
+      <span *ngIf="isNavbarActive">&#10006;</span>
+    </button>
+
+    <div class="navbar-links">
+      <a href="#about" [class.active]="activeSection==='about'" (click)="setActive('about')">About</a>
+      <a href="#skills" [class.active]="activeSection==='skills'" (click)="setActive('skills')">Skills</a>
+      <a href="#projects" [class.active]="activeSection==='projects'" (click)="setActive('projects')">Projects</a>
+      <a href="#contact" [class.active]="activeSection==='contact'" (click)="setActive('contact')">Contact</a>
+    </div>
   </div>
 </nav>

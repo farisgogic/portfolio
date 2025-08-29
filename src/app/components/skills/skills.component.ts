@@ -14,5 +14,7 @@ export class SkillsComponent {
     { name: 'HTML', image: 'assets/html.png' },
     { name: 'CSS', image: 'assets/css.png' },
     { name: 'JavaScript', image: 'assets/js.png' },
+    { name: 'Node.js', image: 'assets/nodejs.png' },
+    { name: 'Docker', image: 'assets/docker.png' },
   ];
 }
