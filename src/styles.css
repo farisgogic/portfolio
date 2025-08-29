@@ -27,6 +27,11 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Prevent layout shifts and overflow-caused zoom */
+*, *::before, *::after { box-sizing: border-box; }
+img, svg, video, canvas { max-width: 100%; height: auto; }
+body { overflow-x: hidden; }
+
 body {
   margin: 0;
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji";
